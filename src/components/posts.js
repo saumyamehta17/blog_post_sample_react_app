@@ -17,7 +17,7 @@ class PostList extends Component{
         console.log('needed here')
         console.log(this.props.posts);
         return _.map(this.props.posts, (post) => {
-            return <li key={post.id} className="list-group-item">{post.title}</li>
+            return <li key={post.id} id={post.id} className="list-group-item">{post.title}</li>
         })
     }
 

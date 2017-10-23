@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reducers from './reducers';
 import PostList from './components/posts'
 import NewPost from './components/post_new'
+import ShowPost from './components/post_show'
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -15,7 +16,8 @@ ReactDOM.render(
       <BrowserRouter>
           <div>
           	<Switch>
-	          <Route path="/posts/new" component={NewPost}></Route>
+	            <Route path="/posts/new" component={NewPost}></Route>
+              <Route path="/posts/:id" component={ShowPost}></Route>
               <Route path="/" component={PostList}></Route>
             </Switch>  
           </div>
